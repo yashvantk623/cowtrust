@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-left">
           <h3>DT solution</h3>
-          <p>India Office<br/>Delhi-NCR, Gurugram</p>
+          <p>Signature Global, Sector 37D, Gurugram</p>
         </div>
         <div className="footer-right">
           <h4>Send Me My Free Website Audit</h4>
