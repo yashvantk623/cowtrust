@@ -1,0 +1,49 @@
+:root{
+  --blue:#1565f0;
+  --dark:#0f0f10;
+  --muted:#f4f4f6;
+  --accent:#ff5a2b;
+  --container:1100px;
+}
+*{box-sizing:border-box}
+html,body,#__next{height:100%}
+body{margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;color:#111;background:#fff}
+.container{max-width:var(--container);margin:0 auto;padding:40px 20px}
+.services{padding:60px 0}
+.callout{display:flex;flex-direction:column;align-items:center;gap:18px}
+.callout-title{font-size:20px;color:#666;margin:0;font-weight:700}
+.callout-sub{color:#a7a7a7;margin:0 0 10px}
+.callout-card{background:#fff;width:100%;max-width:980px;border-radius:12px;padding:28px;box-shadow:0 12px 30px rgba(15,15,15,0.15);display:flex;align-items:flex-start;gap:28px}
+.callout-card .services-list{width:180px}
+.callout-card .services-list ol{list-style:none;padding:0;margin:0}
+.callout-card .services-list li{padding:14px 6px;color:#9a9a9a;font-weight:600}
+.callout-card .services-list li.active{color:var(--accent)}
+.callout-card .services-detail{flex:1}
+.callout-card .services-detail .card{background:transparent;padding:0;box-shadow:none;border-radius:6px}
+.site-header{background:var(--blue);color:#fff}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-weight:700}
+.nav a{margin-left:18px;color:#fff;opacity:0.95}
+.nav a.cta{background:#fff;color:var(--blue);padding:8px 14px;border-radius:6px}
+.hero{background:linear-gradient(180deg,#111 0%,#222 60%);color:#fff;padding:100px 0}
+.hero-inner{text-align:center}
+.hero h1{font-size:40px;line-height:1.05;margin:0 0 18px}
+.hero .lead{opacity:0.85;margin-bottom:22px}
+.btn-primary{background:var(--accent);border:none;color:#fff;padding:12px 22px;border-radius:6px;cursor:pointer}
+.services-grid{display:flex;gap:24px;align-items:flex-start}
+.services-list ol{list-style:none;padding:0;margin:0}
+.services-list li{padding:12px 6px;color:#777}
+.services-list li.active{color:var(--accent);font-weight:700}
+.services-detail .card{background:#fff;padding:24px;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.08)}
+.testimonials{background:#0b0b0b;color:#fff;padding:60px 0}
+.testimonial-card{background:var(--blue);padding:30px;border-radius:8px;color:#fff}
+.section-title{text-align:center;margin-bottom:18px}
+.blog-grid{display:flex;gap:18px;align-items:stretch}
+.post{background:#fff;padding:18px;border-radius:10px;flex:1;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.post.featured{transform:translateY(-10px)}
+.faq .accordion details{background:#fff;margin-bottom:10px;padding:14px;border-radius:8px}
+.site-footer{background:#080808;color:#ddd;padding:40px 0}
+.footer-grid{display:flex;gap:40px;align-items:flex-start}
+.contact-form{display:flex;flex-direction:column;gap:8px}
+.contact-form input,.contact-form textarea{padding:8px;border-radius:6px;border:1px solid #ddd}
+.copyright{padding:18px;text-align:center;color:#888}
