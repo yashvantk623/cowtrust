@@ -26,6 +26,7 @@ p{color:#364155}
 .slide-up{animation:slideUp .6s cubic-bezier(.2,.9,.2,1) both}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes slideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .container{max-width:var(--container);margin:0 auto;padding:40px 20px}
+.container.sm{padding:20px}
 .services{padding:60px 0}
 .callout{display:flex;flex-direction:column;align-items:center;gap:18px}
   
@@ -46,6 +47,7 @@ p{color:#364155}
 .callout-card .services-detail .card .accent-shape{position:absolute;right:-40px;bottom:-40px;width:260px;height:260px;background:var(--accent);border-radius:50%;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
 .site-header{position:fixed;top:0;left:0;right:0;height:88px;background:var(--blue);color:#fff;z-index:999;box-shadow:0 6px 22px rgba(6,24,64,0.16);border-radius:0}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 40px}
+.nav{display:flex;gap:8px;align-items:center}
 .logo{font-weight:200;color:#fff}
 .nav a{margin-left:18px;color:var(--muted);opacity:0.95;position:relative;padding:6px 8px;border-radius:6px}
 .nav a.cta{background:linear-gradient(90deg,var(--accent),#ff7a4b);color:#fff;padding:8px 14px;border-radius:10px;box-shadow:0 8px 26px rgba(255,90,43,0.12)}
@@ -61,6 +63,43 @@ p{color:#364155}
 @media (max-width:760px){
   .header-email{display:none}
   .site-logo{height:48px}
+}
+
+/* Small-screen layout improvements */
+@media (max-width:760px){
+  .container{padding:18px}
+  .hero{min-height:70vh}
+  .hero h1{font-size:28px}
+  .hero .lead{font-size:14px}
+  .hero-actions{flex-direction:column;gap:12px}
+  .hero-controls{display:flex}
+  .btn-primary{margin-top:12px;margin-left:0;width:100%;padding:12px;border-radius:10px}
+
+  /* Header/nav adjustments */
+  .site-header{height:72px}
+  .header-inner{padding:0 16px}
+  .nav{flex-wrap:wrap;gap:6px}
+  .nav a{font-size:14px;padding:8px}
+
+  /* Callout/card stack for mobile */
+  .callout-card{flex-direction:column;padding:20px}
+  .callout-card .services-list{width:100%;display:flex;overflow:auto;gap:8px}
+  .callout-card .services-list li{flex:0 0 auto;padding:10px}
+  .callout-card .services-detail{padding-left:0}
+  .callout-card .services-detail .card{min-height:initial}
+  .callout-card .services-detail .card .accent-shape{display:none}
+
+  /* Services grid adjustments */
+  .services-grid{flex-direction:column}
+  .services-grid .services-list{width:100%}
+
+  /* Blog/post stacking */
+  .blog-grid{flex-direction:column}
+  .post{padding:14px}
+
+  /* Footer improvements */
+  .footer-meta{padding:12px}
+  .footer-social .social{width:36px;height:36px}
 }
 .hero{position:relative;min-height:120vh;display:flex;align-items:center;justify-content:center;color:#fff;padding:0;  overflow:visible}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(230,240,255,0.02) 60%);z-index:2}
@@ -272,6 +311,16 @@ p{color:#364155}
   .left-menu{width:100%;order:2}
   .right-panel{order:1}
   .features{grid-template-columns:1fr}
+}
+
+/* Very small devices */
+@media (max-width:420px){
+  h1{font-size:28px}
+  h2{font-size:20px}
+  .container{padding:12px}
+  .header-inner{padding:0 10px}
+  .site-logo{height:40px}
+  .floating-whatsapp{right:12px;bottom:12px;width:48px;height:48px}
 }
 
 /* Background images: global and per-section
