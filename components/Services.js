@@ -74,11 +74,11 @@ export default function Services(){
               ))}
             </ul>
 
-            <div className="small-cards">
-              <div className="card glass small">Fast Delivery</div>
+            {/* <div className="small-cards"> */}
+              {/* <div className="card glass small">Fast Delivery</div>
               <div className="card glass small">Premium Quality</div>
-              <div className="card glass small">Scalable Solutions</div>
-            </div>
+              <div className="card glass small">Scalable Solutions</div> */}
+            {/* </div> */}
           </nav>
 
           <main className="right-panel">

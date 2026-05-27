@@ -170,7 +170,24 @@ p{color:#364155}
 .floating-whatsapp svg{ width:22px; height:22px }
 
 /* Services v2: modern, glassmorphism, neon */
-.services-v2{padding:60px 0}
+.services-v2{padding:32px 0}
+.services-v2{
+  /* Fill the viewport (subtract header) so the section is full-screen */
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure the inner container also stretches so left tabs and right panel can
+   use full available height and scroll independently when needed */
+.services-v2 > .container{
+  min-height: calc(100vh - var(--header-height));
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-top:24px;
+  padding-bottom:24px;
+}
 .hero-small{text-align:center;margin-bottom:28px}
 .hero-small h2{margin:0;font-size:26px;color:#e6f1ff}
 .hero-small .sub{color:#bfcfe6;margin-top:8px}
@@ -179,8 +196,8 @@ p{color:#364155}
 .hero-small h2{background:linear-gradient(90deg,#e6f1ff,#9be7ff 60%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 6px 30px rgba(155,215,255,0.06)}
 .hero-small .sub{color:rgba(200,225,255,0.9)}
 
-.services-grid-v2{display:flex;gap:28px;align-items:flex-start}
-.left-menu{width:320px;display:flex;flex-direction:column;gap:18px}
+.services-grid-v2{display:flex;gap:28px;align-items:stretch;height:100%}
+.left-menu{width:320px;display:flex;flex-direction:column;gap:18px;height:100%;flex-shrink:0;overflow:auto;padding-right:8px}
 .category-tabs{display:flex;gap:8px;justify-content:flex-start}
 .cat-btn{background:transparent;border:1px solid rgba(255,255,255,0.03);color:#cfe6ff;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600}
 .cat-btn.active{background:linear-gradient(90deg,#0f66ff66,#8f4bff55);box-shadow:0 10px 36px rgba(99,102,255,0.22);color:#ffffff;transform:translateY(-2px)}
@@ -188,7 +205,7 @@ p{color:#364155}
 .cat-btn::after{content:'';position:absolute;left:10%;right:10%;bottom:-8px;height:6px;border-radius:6px;background:linear-gradient(90deg,#4fd3ff44,#b56bff44);filter:blur(8px);opacity:0;transition:opacity .22s}
 .cat-btn.active::after{opacity:1}
 
-.vertical-list{list-style:none;padding:12px;margin:0;background:linear-gradient(180deg, rgba(8,10,16,0.6), rgba(8,10,16,0.4));border-radius:14px;backdrop-filter:blur(10px);border:1px solid rgba(140,160,255,0.04)}
+.vertical-list{list-style:none;padding:12px;margin:0;background:linear-gradient(180deg, rgba(8,10,16,0.6), rgba(8,10,16,0.4));border-radius:14px;backdrop-filter:blur(10px);border:1px solid rgba(140,160,255,0.04);max-height:calc(100% - 140px);overflow:auto}
 .vertical-list li{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:10px;cursor:pointer;transition:all .22s cubic-bezier(.2,.9,.2,1);color:#c8d8ee}
 .vertical-list li{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:12px;cursor:pointer;transition:transform .26s cubic-bezier(.2,.9,.2,1),box-shadow .26s,color .18s;color:#c8d8ee;margin-bottom:8px}
 .vertical-list li .tab-desc{display:block;color:#93a6c3;font-size:12px;margin-top:6px}
@@ -202,7 +219,8 @@ p{color:#364155}
 .small-cards{display:flex;flex-direction:column;gap:10px;margin-top:12px}
 .card.small{padding:10px 12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));color:#dbeefe;backdrop-filter:blur(6px)}
 
-.right-panel{flex:1;display:flex;flex-direction:column;gap:18px}
+.right-panel{flex:1;display:flex;flex-direction:column;gap:18px;height:100%;overflow:hidden}
+.right-panel .panel.glass{height:100%;overflow:auto}
 .panel.glass{padding:28px;border-radius:16px;background:linear-gradient(180deg, rgba(10,12,20,0.85), rgba(18,18,28,0.85));backdrop-filter:blur(12px);box-shadow:0 30px 80px rgba(6,8,20,0.55);border:1px solid rgba(110,90,255,0.06)}
 .panel-header{display:flex;gap:16px;align-items:center}
 .icon-glow{width:72px;height:72px;border-radius:14px;background:radial-gradient(circle at 30% 30%, rgba(70,170,255,0.98), rgba(180,90,255,0.85));box-shadow:0 16px 40px rgba(100,80,255,0.22);filter:drop-shadow(0 8px 30px rgba(86,100,255,0.12))}
